@@ -2,6 +2,8 @@
 Debug Rank is an android sample that uses MVP for the architecture to ease unit test coverage.  The app is the gamification 
 of debugging code to find X bugs.  
 
+See the published app in [Google Play](https://play.google.com/store/apps/details?id=debugrank.grapecity.com.debugrank&hl=en)
+
 Cloud code compiling / execution is possible by utilizing the HackerRank API found at hackerrank.com/api.
 
 The code editor uses GrapeCity's Xuni FlexGrid for bi directional scrolling and inline editing.
