@@ -1,0 +1,11 @@
+[
+	{
+		"key": "basic_operator",
+		"name": "Basic Operator",
+		"points": 5,
+		"time": 180,
+		"bugs": 1,
+		"testcases":["1,2","2,1"],
+		"answers":["3","3"]
+	}
+]

@@ -1,0 +1,20 @@
+[
+	{
+		"key": "java_8",
+		"name": "Java 8",
+		"file": ".java",
+		"code": 43
+	},
+	{
+		"key": "csharp",
+		"name": "C#",
+		"file": ".cs",
+		"code": 9
+	},
+	{
+		"key": "javascript",
+		"name": "JavaScript",
+		"file": ".js",
+		"code": 20
+	}
+]
