@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DebugRank.iml" filepath="$PROJECT_DIR$/DebugRank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaPrettify-1.2.1/JavaPrettify-1.2.1.iml" filepath="$PROJECT_DIR$/JavaPrettify-1.2.1/JavaPrettify-1.2.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-lib/java-lib.iml" filepath="$PROJECT_DIR$/java-lib/java-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuni.core-4.0.20161.115/xuni.core-4.0.20161.115.iml" filepath="$PROJECT_DIR$/xuni.core-4.0.20161.115/xuni.core-4.0.20161.115.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuni.flexgrid-4.0.20161.115/xuni.flexgrid-4.0.20161.115.iml" filepath="$PROJECT_DIR$/xuni.flexgrid-4.0.20161.115/xuni.flexgrid-4.0.20161.115.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('xuni.core-4.0.20161.115.aar'))

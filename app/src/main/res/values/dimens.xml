@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="puzzle_image">35dp</dimen>
+    <dimen name="puzzle_text">12sp</dimen>
+    <dimen name="solve_toolbar_image">24dp</dimen>
+    <dimen name="solve_toolbar_text">18sp</dimen>
+    <dimen name="game_over_image_size">80dp</dimen>
+</resources>

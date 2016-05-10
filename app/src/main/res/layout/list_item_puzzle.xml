@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+    <LinearLayout
+        android:id="@+id/puzzleParentLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/puzzleName"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="Basic Operator"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.grapecity.debugrank.ui.misc.TextViewDrawableSize
+                android:id="@+id/points"
+                style="@style/Puzzle.Text.Border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_grade_gold_display_wrapper"
+                app:compoundDrawableWidth="@dimen/puzzle_image"
+                app:compoundDrawableHeight="@dimen/puzzle_image"
+                android:text="0\npoints"/>
+
+            <View
+                style="@style/PuzzleBorderView"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"></View>
+
+            <com.grapecity.debugrank.ui.misc.TextViewDrawableSize
+                android:id="@+id/minutes"
+                style="@style/Puzzle.Text.Border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_timer_grey_display_wrapper"
+                app:compoundDrawableWidth="@dimen/puzzle_image"
+                app:compoundDrawableHeight="@dimen/puzzle_image"
+                android:text="0:00\nminutes"/>
+
+            <View
+                style="@style/PuzzleBorderView"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"></View>
+
+            <com.grapecity.debugrank.ui.misc.TextViewDrawableSize
+                android:id="@+id/bugs"
+                style="@style/Puzzle.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_bug_report_green_display_wrapper"
+                app:compoundDrawableWidth="@dimen/puzzle_image"
+                app:compoundDrawableHeight="@dimen/puzzle_image"
+                android:text="0\nbugs"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <com.grapecity.debugrank.ui.misc.TextViewDrawableSize
+            android:id="@+id/solved"
+            style="@style/Puzzle.Solved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solved 04/25/2016"
+        />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

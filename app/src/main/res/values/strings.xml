@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Debug Rank</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="points">%1$d\npoints</string>
+
+    <string name="minutes">%1$d:00\nminutes</string>
+    <string name="minute">1:00\nminute</string>
+
+    <string name="bugs">%1$d\nbugs</string>
+    <string name="bug">1\nbug</string>
+
+    <string name="out_of_time">Out of Time!</string>
+    <string name="ok">ok</string>
+    <string name="code">code</string>
+    <string name="result">result</string>
+    <string name="uploading">uploading...</string>
+    <string name="passed_test_cases">%1$d/%2$d test cases</string>
+
+    <string name="test_case_num">Testcase</string>
+    <string name="input">Input</string>
+    <string name="output">Output</string>
+    <string name="expected_output">Expected Output</string>
+    <string name="message">Message</string>
+    <string name="compile_error">Compile Error(s)</string>
+    <string name="solved">Solved</string>
+
+    <string name="internet_no">No internet</string>
+    <string name="internet_error">Unable to connect to the internet</string>
+</resources>

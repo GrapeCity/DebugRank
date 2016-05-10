@@ -1,0 +1,73 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="Solve.Toolbar.Text" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">@dimen/solve_toolbar_text</item>
+        <item name="android:textColor">@android:color/primary_text_dark</item>
+    </style>
+
+    <style name="Puzzle.Text" parent="TextAppearance.AppCompat.Headline">
+        <item name="compoundDrawableWidth">@dimen/puzzle_image</item>
+        <item name="compoundDrawableHeight">@dimen/puzzle_image</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">@dimen/puzzle_text</item>
+    </style>
+
+    <style name="Puzzle.Solved" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/puzzle_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/colorSuccess</item>
+        <item name="android:textColor">@color/cardview_light_background</item>
+    </style>
+
+    <style name="Puzzle.Text.Border" parent="Puzzle.Text">
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="PuzzleBorderView">
+        <item name="android:background">@drawable/right_border</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+    <style name="TestCaseTitle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="TestCaseLayout.Text" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:background">@color/colorTestCasePanel</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="NoData.Text" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:textColor">@color/colorNoDataText</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+</resources>

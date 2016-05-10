@@ -1,0 +1,1 @@
+include ':app', ':java-lib', ':JavaPrettify-1.2.1', ':xuni.core-4.0.20161.115', ':xuni.flexgrid-4.0.20161.115'
