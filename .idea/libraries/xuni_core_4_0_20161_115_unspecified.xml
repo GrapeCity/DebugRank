@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="xuni.core-4.0.20161.115-unspecified">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/DebugRank/xuni.core-4.0.20161.115/unspecified/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/DebugRank/xuni.core-4.0.20161.115/unspecified/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/GrapeCityDebugRank/xuni.core-4.0.20161.115/unspecified/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/GrapeCityDebugRank/xuni.core-4.0.20161.115/unspecified/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
