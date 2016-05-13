@@ -1,5 +1,5 @@
 # DebugRank
-Debug Rank is an android sample that uses MVP for the architecture to ease unit test coverage.  The app is the gamification 
+DebugRank is an android sample that uses MVP for the architecture to ease unit test coverage.  The app is the gamification 
 of debugging code to find X bugs.  
 
 See the published app in [Google Play](https://play.google.com/store/apps/details?id=debugrank.grapecity.com.debugrank&hl=en)
