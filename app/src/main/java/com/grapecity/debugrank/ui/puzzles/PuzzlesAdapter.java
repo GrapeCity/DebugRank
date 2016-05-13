@@ -190,7 +190,7 @@ public class PuzzlesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
             Puzzle puzzle = list.get((position - 1));
 
-            if (completedPuzzleMap.containsKey(puzzle.key))
+            if (completedPuzzleMap != null && completedPuzzleMap.containsKey(puzzle.key))
             {
                 solvedDate = completedDateFormat.format(completedPuzzleMap.get(puzzle.key).getDate());
             }
