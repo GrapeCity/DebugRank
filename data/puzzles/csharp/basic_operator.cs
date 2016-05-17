@@ -24,6 +24,7 @@ class BasicOperator
 	//
 	static int AddIntegers(int a, int b)
 	{
+		//hint: here is the bug
 		return a - b;
 	}
 

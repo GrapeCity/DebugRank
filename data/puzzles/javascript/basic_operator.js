@@ -1,40 +1,55 @@
-process.stdin.resume();
-process.stdin.setEncoding('ascii');
+// 
+// Welcome to DebugRank.
+// 
+// The purpose of the Basic Operator class is to return the sum
+// of two integers.
+// 
+// Review the code below and find where the bug exists.
+// 
+// When you've found and fix the bug simply press the button
+// in the bottom right hand corner to compile and test your code.
+// 
+// View test case results and compile error messages
+// in the tab in the upper right hand corner.
+//
+//
 
-var input_stdin = "";
-var input_stdin_array = "";
-var input_currentline = 0;
-
-process.stdin.on('data', function (data) {
-    input_stdin += data;
-});
-
-process.stdin.on('end', function () {
-    input_stdin_array = input_stdin.split("\n");
-    main();    
-});
-
-function readLine() {
-    return input_stdin_array[input_currentline++];
+//
+// Returns the sum of two integers.
+//
+function addIntegers(a, b)
+{
+    //hint: here is the bug
+    return a - b; 
 }
 
-/////////////// ignore above this line ////////////////////
-
-function solveMeFirst(a, b) {
-  return a - b;
-  
-}
-
-function main() {
-    // write your code here.
-    // call `readLine()` to read a line.
-    // use console.log() to write to stdout
-
-    var numbers = readLine().split(',');
+//
+// Don't edit any code below this line.
+// Necessary for HackerRank cloud compiling.
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// 
+function main()
+{
+    var numbers = input_stdin.split(',');
     
     var a = parseInt(numbers[0]);
     var b = parseInt(numbers[1]);
 
-    var res = solveMeFirst(a, b);
+    var res = addIntegers(a, b);
+
     console.log(res);
 }
+
+process.stdin.resume();
+process.stdin.setEncoding('ascii');
+
+var input_stdin = "";
+
+process.stdin.on('data', function (data)
+{
+    input_stdin += data;
+});
+process.stdin.on('end', function ()
+{
+    main();    
+});
