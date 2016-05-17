@@ -7,5 +7,23 @@
 		"bugs": 1,
 		"testcases":["1,2","2,1"],
 		"answers":["3","3"]
+	},
+	{
+		"key": "string_pangram",
+		"name": "String Pangram",
+		"points": 5,
+		"time": 180,
+		"bugs": 2,
+		"testcases":["The quick brown fox jumps over the lazy dog","I am a fox"],
+		"answers":["pangram","not pangram"]
+	},
+	{
+		"key": "string_pangram",
+		"name": "String Pangram",
+		"points": 10,
+		"time": 240,
+		"bugs": 1,
+		"testcases":["Bacon & Eggs, Ham and Eggs","Phone,Watch"],
+		"answers":["substring exists","no substring exists]
 	}
 ]
