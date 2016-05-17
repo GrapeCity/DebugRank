@@ -91,4 +91,126 @@ Once a user selects a language they will be presented with a list of puzzles to 
 
 
 **Step 4: new language-puzzle folder**
-The actual code files for the puzzles should be placed under the data/puzzles/{new language key}.  Create a new .cs file (if doing c#) and place it in this directory.
+The actual code files for the puzzles should be placed under the data/puzzles/{new language key}.  Simply create a new folder to hold puzzles for that language.
+
+**Step 5: add a basic-operator puzzle**
+Create a new .cs file (if doing c#) and place it in the data/puzzles/{new language key}.  **Note that the file name needs to match the puzzle key in {new language key}.json.**  Example, data/puzzles/csharp/basic_operator.cs.  Refer to the add new puzzle section below to add the basic operator puzzle for your new language.
+
+**Follow these steps to add a new puzzle**
+
+1. add puzzle metadata
+2. add raw code file
+3. add description to raw code file
+4. add function / method comments to raw code file
+5. test code
+
+**Step 1: add puzzle metadata**
+update data/puzzles/{language key}.json to include puzzle metadata, Example:
+
+```
+[
+	{
+		"key": "basic_operator",
+		"name": "Basic Operator",
+		"points": 5,
+		"time": 180,
+		"bugs": 1,
+		"testcases":["1,2","2,1"],
+		"answers":["3","3"]
+	}
+]
+```
+
+Puzzle metadata fields:
+
+* **key** - The key field acts as a PK and as the raw code file name.
+* **name** - The actual puzzle name displayed to the end user.
+* **points** - The number of points the end user is rewarded upon solving.
+* **time** - The time limit to solve the puzzle in seconds.  Note round to 60 seconds with a minimum of 60 seconds.
+* **bugs** - The total number of bugs in the code the user must fix.
+* **testcases** - Array of strings that HackerRank will pass to your main function and your code will process.  Size must be equal to answers size.
+* **answers** - Array of strings that will be compared to your program's output in order to determine if test case passes.  Size must be equal to testcases size.
+
+**Step 2: add raw code file**
+Add the raw code file under data/puzzles/{language key}/{puzzle key}.{languge extension}. Example, data/puzzles/csharp/basic_operator.cs.
+
+```
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+class BasicOperator
+{
+	static int AddIntegers(int a, int b)
+	{
+		//hint: here is the bug
+		return a - b;
+	}
+
+	static void Main(String[] args)
+	{
+		String[] numbers = Console.ReadLine().Split(',');
+		
+		int val1 = Convert.ToInt32(numbers [0]);
+		int val2 = Convert.ToInt32(numbers [1]);
+
+		int sum = AddIntegers(val1,val2);
+
+		Console.WriteLine(sum);
+	}
+}
+```
+
+**Step 3: add description to raw code file**
+Help the end user better understand the point of the puzzle by supplying a top level description.  Use `\\` style comments as the syntax highlighter is not perfect.  If adding the basic operator puzzle please copy paste the existing top level description used in other languages.
+
+**Step 4: add function / method comments to raw code file**
+Help the end user understand even further by suppling additional comments for each method.  Copy paste the following comments for the main function that the HackerRank API uses:
+
+```
+//
+// Don't edit any code inside this method.
+// Necessary for HackerRank cloud compiling.
+// 
+static void Main(String[] args)
+{
+}
+```
+
+If adding the basic operator puzzle give the user a hint to where the bug is to help them learn the app:
+
+```
+static int AddIntegers(int a, int b)
+{
+	//hint: here is the bug
+	return a - b;
+}
+```
+
+**Step 5: test code**
+You code should expect a single `String` as the input.  The input will be whatever is entered from the puzzle json metadata file field **testcases**.  If multiple inputs are required you'll need to split them by delimiter, ideally a comma will suffice.  Example:
+
+```
+//json file has -> "testcases":["1,2","2,1"]
+String[] numbers = Console.ReadLine().Split(',');
+		
+int val1 = Convert.ToInt32(numbers [0]);
+int val2 = Convert.ToInt32(numbers [1]);
+```
+
+Make sure to output to the console / system the answer to be checked against the puzzle json metadata file field **answers**.
+
+```
+//json file has -> "answers":["3","3"]
+int sum = AddIntegers(val1,val2);
+
+Console.WriteLine(sum);
+```
+
+Now you should be able to test your code in your favorite IDE by simulating input manually through the console window.  To test fully you should have previously forked this repo.
+
+Update the variable `HACKERRANK_API_KEY` in class `java-lib/com.grapecity.debugrank.javalib.constants.Api` to your HackerRank API key.  Aquire a new HackerRank API key at [https://www.hackerrank.com/api](https://www.hackerrank.com/api).
+
+Update the variable `GITHUB_API_OWNER` in class `java-lib/com.grapecity.debugrank.javalib.constants.Api` to your Github name.
+
+You should now be able to launch the app to test against your forked repo.  **Note** that Retrofit will automatically be caching responses.  You'll need to clear the DebugRank local app cache in order to retrive updated code files during testing iterations.
