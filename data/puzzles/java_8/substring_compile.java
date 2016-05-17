@@ -23,12 +23,12 @@ public class Substring
 		char[] stringACharacters = stringA.toCharArray();
 		
 		for(char character : stringACharacters)
-        {
+ 		{
 			if(stringB.contains(character))
 			{
 				return true;
 			}
-        }
+ 		}
 		
 		return false;
 	}
