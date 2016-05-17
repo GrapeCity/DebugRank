@@ -1,5 +1,6 @@
 package com.grapecity.debugrank.javalib.ui.solve.code;
 
+import com.grapecity.debugrank.javalib.entities.AggregatedBugsPoints;
 import com.grapecity.debugrank.javalib.entities.CodeLine;
 import com.grapecity.debugrank.javalib.entities.ProgrammingLanguage;
 import com.grapecity.debugrank.javalib.entities.Puzzle;
@@ -87,6 +88,19 @@ public class SolveCodeInteractorImpl<T> extends BaseRepositoryInteractor impleme
                 highlightedCache.put(codeLine.lineNumber, dispayValue);
 
                 return dispayValue;
+            }
+        });
+    }
+
+    @Override
+    public Observable<Boolean> showTutorial()
+    {
+        return super.loadAggregatedBugsPoints().map(new Func1<AggregatedBugsPoints, Boolean>()
+        {
+            @Override
+            public Boolean call(AggregatedBugsPoints aggregatedBugsPoints)
+            {
+                return aggregatedBugsPoints.points == 0;
             }
         });
     }

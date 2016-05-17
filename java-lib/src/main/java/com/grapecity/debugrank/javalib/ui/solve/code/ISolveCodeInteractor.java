@@ -19,4 +19,6 @@ public interface ISolveCodeInteractor<T> extends IMvpInteractor
     T getSyntaxHighlightedText(ProgrammingLanguage language, CodeLine codeLine);
 
     Observable<T> refreshSyntaxHighlightedTextCache(ProgrammingLanguage language, CodeLine codeLine);
+
+    Observable<Boolean> showTutorial();
 }

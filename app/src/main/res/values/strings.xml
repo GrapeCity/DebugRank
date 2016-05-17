@@ -27,4 +27,13 @@
 
     <string name="internet_no">No internet</string>
     <string name="internet_error">Unable to connect to the internet</string>
+
+    <string name="showcase_step1_title">Compiling Code</string>
+    <string name="showcase_step1_desc">Click the action button to compile code changes</string>
+
+    <string name="showcase_step2_title">Test Case Results</string>
+    <string name="showcase_step2_desc">Click test cases tab to view test case results or compile errors</string>
+
+    <string name="showcase_step3_title">Finding Bugs</string>
+    <string name="showcase_step3_desc">Click the code tab to view the code.  Double tap a line to edit.</string>
 </resources>

@@ -30,10 +30,13 @@ public class SolveCodePresenterImpl<T> extends BaseSolveChildPresenter<ISolveCod
         this.mvpInteractor.loadCodeFile(mvpView.getLanguage(), mvpView.getPuzzle())
                 .subscribeOn(appThreads.newThread())
                 .observeOn(appThreads.mainThread())
-                .subscribe(new ObserverAdapter<List<CodeLine>>(){
+                .subscribe(new ObserverAdapter<List<CodeLine>>()
+                {
                     @Override
                     public void onNext(List<CodeLine> codeLines)
                     {
+                        //once the code is loaded we can determine if the tutorial must be shown
+                        determineIfTutorialMustBeShown();
                         mvpView.codeLoaded(codeLines);
                     }
 
@@ -41,6 +44,24 @@ public class SolveCodePresenterImpl<T> extends BaseSolveChildPresenter<ISolveCod
                     public void onError(Throwable e)
                     {
                         parentView.unableToLoadSolveCode();
+                    }
+                });
+    }
+
+    private void determineIfTutorialMustBeShown()
+    {
+        this.mvpInteractor.showTutorial()
+                .subscribeOn(appThreads.newThread())
+                .observeOn(appThreads.mainThread())
+                .subscribe(new ObserverAdapter<Boolean>()
+                {
+                    @Override
+                    public void onNext(Boolean showTutorial)
+                    {
+                        if (showTutorial)
+                        {
+                            parentView.showTutorial();
+                        }
                     }
                 });
     }
@@ -65,7 +86,8 @@ public class SolveCodePresenterImpl<T> extends BaseSolveChildPresenter<ISolveCod
         this.mvpInteractor.refreshSyntaxHighlightedTextCache(this.mvpView.getLanguage(), codeLine)
                 .subscribeOn(appThreads.newThread())
                 .observeOn(appThreads.mainThread())
-                .subscribe(new ObserverAdapter<T>(){
+                .subscribe(new ObserverAdapter<T>()
+                {
                     @Override
                     public void onNext(T displayValue)
                     {

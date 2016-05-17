@@ -4,16 +4,24 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
+import android.support.annotation.StringRes;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.github.amlcurran.showcaseview.ShowcaseView;
+import com.github.amlcurran.showcaseview.targets.ActionViewTarget;
+import com.github.amlcurran.showcaseview.targets.ViewTarget;
 import com.grapecity.debugrank.javalib.entities.AggregatedBugsPoints;
 import com.grapecity.debugrank.javalib.entities.CodeLine;
 import com.grapecity.debugrank.javalib.entities.CompletedPuzzle;
@@ -26,6 +34,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.Bind;
+
 import com.grapecity.debugrank.MyApp;
 import com.grapecity.debugrank.R;
 import com.grapecity.debugrank.services.image.IImageLoadingService;
@@ -60,6 +69,8 @@ public class SolveActivity extends BaseActivity implements ISolveView, ITimerCom
 
     boolean codeLoaded = false;
 
+    ShowcaseView compileShowcaseView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -91,6 +102,9 @@ public class SolveActivity extends BaseActivity implements ISolveView, ITimerCom
 
         //hide fab till code loaded
         hideFab();
+
+        Button button = new Button(this);
+        button.setVisibility(View.GONE);
     }
 
     @Override
@@ -106,7 +120,7 @@ public class SolveActivity extends BaseActivity implements ISolveView, ITimerCom
     {
         super.onDestroy();
 
-        if(timerTextView != null)
+        if (timerTextView != null)
         {
             timerTextView.stopTimer();
         }
@@ -117,7 +131,7 @@ public class SolveActivity extends BaseActivity implements ISolveView, ITimerCom
     {
         super.onPause();
 
-        if(timerTextView != null)
+        if (timerTextView != null)
         {
             timerTextView.stopTimer();
         }
@@ -129,9 +143,9 @@ public class SolveActivity extends BaseActivity implements ISolveView, ITimerCom
         super.onResume();
 
         //if resuming the activity and the code was previously loaded
-        if(codeLoaded)
+        if (codeLoaded)
         {
-            if(timerTextView != null)
+            if (timerTextView != null)
             {
                 timerTextView.startTimer();
             }
@@ -212,8 +226,10 @@ public class SolveActivity extends BaseActivity implements ISolveView, ITimerCom
     @Override
     public void codeCompiled(List<TestCaseResult> result, boolean passed, int numberPassedTestCases)
     {
+        showcaseStep2();
+
         //compile error
-        if(result != null && !passed && numberPassedTestCases == 0 && result.size() > 0 && result.get(0).isCompileError())
+        if (result != null && !passed && numberPassedTestCases == 0 && result.size() > 0 && result.get(0).isCompileError())
         {
             updateResultTabTitle(getResources().getString(R.string.compile_error));
         }
@@ -295,6 +311,8 @@ public class SolveActivity extends BaseActivity implements ISolveView, ITimerCom
 
     private void uploadCode()
     {
+        showcaseStep1Clicked();
+
         //called whenever FAB is clicked to perform an upload, or the time runs out so we need to automatically upload
         solvePresenter.uploadCode();
     }
@@ -333,9 +351,99 @@ public class SolveActivity extends BaseActivity implements ISolveView, ITimerCom
     @Override
     public void onRefresh()
     {
-        if(!codeLoaded)
+        if (!codeLoaded)
         {
             solvePresenter.loadCode();
+        }
+    }
+
+    @Override
+    public void showTutorial()
+    {
+        //presenter will tell view that tutorial must be shown
+        showShowcase(new ViewTarget(R.id.fab, this), R.string.showcase_step1_title, R.string.showcase_step1_desc);
+    }
+
+    //when fab is clicked this is called
+    private void showcaseStep1Clicked()
+    {
+        hideShowcase();
+    }
+
+    //when code is compile this is called
+    private void showcaseStep2()
+    {
+        if(compileShowcaseView != null)
+        {
+            final View compileTab = ((ViewGroup) tabLayout.getChildAt(0)).getChildAt(1);
+
+            compileTab.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    compileTab.setOnClickListener(null);
+
+                    showcaseStep2Clicked();
+                }
+            });
+
+            showShowcase(new ViewTarget(compileTab), R.string.showcase_step2_title, R.string.showcase_step2_desc);
+        }
+    }
+
+    private void showcaseStep2Clicked()
+    {
+        hideShowcase();
+
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                showcaseStep3();
+            }
+        }, 2500);
+    }
+
+    private void showcaseStep3()
+    {
+        final View compileTab = ((ViewGroup) tabLayout.getChildAt(0)).getChildAt(0);
+
+        compileTab.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                compileTab.setOnClickListener(null);
+
+                hideShowcase();
+            }
+        });
+
+        showShowcase(new ViewTarget(compileTab), R.string.showcase_step3_title, R.string.showcase_step3_desc);
+    }
+
+    private void showShowcase(ViewTarget viewTarget, @StringRes int titleResId, @StringRes int descriptionResId)
+    {
+        Button button = new Button(this);
+        button.setVisibility(View.GONE);
+
+        compileShowcaseView = new ShowcaseView.Builder(this)
+                .withNewStyleShowcase()
+                .setStyle(R.style.CustomShowcaseTheme2)
+                .setTarget(viewTarget)
+                .setContentTitle(titleResId)
+                .setContentText(descriptionResId)
+                .replaceEndButton(button)
+                .build();
+    }
+
+    private void hideShowcase()
+    {
+        if (compileShowcaseView != null && compileShowcaseView.isShowing())
+        {
+            compileShowcaseView.hide();
         }
     }
 }

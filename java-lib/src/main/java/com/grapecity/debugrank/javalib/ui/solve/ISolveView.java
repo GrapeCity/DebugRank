@@ -12,4 +12,6 @@ public interface ISolveView extends ISolveChildView, ICodeEditing
     void unableToLoadSolveCode();
 
     void unableToUploadAndCompileCode();
+
+    void showTutorial();
 }

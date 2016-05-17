@@ -70,4 +70,9 @@
         <item name="android:layout_marginBottom">20dp</item>
     </style>
 
+    <style name="CustomShowcaseTheme2" parent="ShowcaseView">
+        <item name="sv_backgroundColor">#e51249d9</item>
+        <item name="sv_showcaseColor">#25467A</item>
+    </style>
+
 </resources>

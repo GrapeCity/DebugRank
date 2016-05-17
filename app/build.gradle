@@ -101,6 +101,8 @@ dependencies {
 
     compile "com.google.code.gson:gson:2.5"
 
+    compile 'com.github.amlcurran.showcaseview:library:5.4.3'
+
     compile "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
     compile "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
     compile "com.squareup.retrofit2:adapter-rxjava:$RETROFIT_VERSION"
