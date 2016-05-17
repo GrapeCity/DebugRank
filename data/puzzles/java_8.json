@@ -18,8 +18,8 @@
 		"answers":["pangram","not pangram"]
 	},
 	{
-		"key": "string_pangram",
-		"name": "String Pangram",
+		"key": "substring_compile",
+		"name": "Substring Compile",
 		"points": 10,
 		"time": 240,
 		"bugs": 1,
