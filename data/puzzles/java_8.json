@@ -23,7 +23,7 @@
 		"points": 10,
 		"time": 240,
 		"bugs": 1,
-		"testcases":["Bacon & Eggs, Ham and Eggs","Phone,Watch"],
-		"answers":["substring exists","no substring exists]
+		"testcases":["Bacon & Eggs,Ham and Eggs","Phone,Watch"],
+		"answers":["substring exists","no substring exists"]
 	}
 ]
