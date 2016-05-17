@@ -40,7 +40,7 @@ function main()
     var strings = input_stdin.split(',');
     
     var stringA = strings[0];
-    var stringB = strings1];
+    var stringB = strings[1];
 
     var res = doesSubstringExist(stringA, stringB);
 
