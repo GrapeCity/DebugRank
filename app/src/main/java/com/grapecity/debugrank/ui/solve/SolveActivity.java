@@ -279,6 +279,7 @@ public class SolveActivity extends BaseActivity implements ISolveView, ITimerCom
                     public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which)
                     {
                         Intent intent = getIntent(LanguagesActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                         activity.startActivity(intent);
                     }
                 })
