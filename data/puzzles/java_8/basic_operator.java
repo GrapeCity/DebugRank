@@ -1,25 +1,42 @@
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-//
-// Return the sum of two integers.
-//
-public class Solution
+/**
+ * 
+ * Welcome to DebugRank.
+ * 
+ * The purpose of the Basic Operator class is to return the sum
+ * of two integers.
+ * 
+ * Review the code below and find where the bug exists.
+ * 
+ * When you've found and fix the bug simply press the button
+ * in the bottom right hand corner to compile and test your code.
+ * 
+ * View test case results and compile error messages
+ * in the tab in the upper right hand corner.
+ *
+ */
+public class BasicOperator
 {
-	//
-	// Bugs can be found in this method only.
-	//
-	static int solveMeFirst(int a, int b)
+	/**
+	 * Returns the sum of two integers.
+	 * 
+	 * @param a the first integer.
+	 * @param b the second integer.
+	 * @return the sum of a and b.
+	 */
+	static int addIntegers(int a, int b)
 	{
+		//hint: this is the bug.
 		return a - b;
 	}
 
-	//
-	// Don't edit any code of this method, necessary for HackerRank API
-	//
+	/**
+	 * Don't edit any code inside this method.
+	 * Necessary for HackerRank cloud compiling.
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args)
 	{
 		Scanner in = new Scanner(System.in);
@@ -31,7 +48,7 @@ public class Solution
 
 		int sum;
 
-		sum = solveMeFirst(a, b);
+		sum = addIntegers(a, b);
 
 		System.out.println(sum);
 	}
