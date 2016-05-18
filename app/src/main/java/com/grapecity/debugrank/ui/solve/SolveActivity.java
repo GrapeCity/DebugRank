@@ -408,20 +408,22 @@ public class SolveActivity extends BaseActivity implements ISolveView, ITimerCom
 
     private void showcaseStep3()
     {
-        final View compileTab = ((ViewGroup) tabLayout.getChildAt(0)).getChildAt(0);
+        final View codeTab = ((ViewGroup) tabLayout.getChildAt(0)).getChildAt(0);
 
-        compileTab.setOnClickListener(new View.OnClickListener()
+        codeTab.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                compileTab.setOnClickListener(null);
+                codeTab.setOnClickListener(null);
 
                 hideShowcase();
+
+                compileShowcaseView = null;
             }
         });
 
-        showShowcase(new ViewTarget(compileTab), R.string.showcase_step3_title, R.string.showcase_step3_desc);
+        showShowcase(new ViewTarget(codeTab), R.string.showcase_step3_title, R.string.showcase_step3_desc);
     }
 
     private void showShowcase(ViewTarget viewTarget, @StringRes int titleResId, @StringRes int descriptionResId)
