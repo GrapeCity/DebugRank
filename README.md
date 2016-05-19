@@ -214,3 +214,7 @@ Update the variable `HACKERRANK_API_KEY` in class `java-lib/com.grapecity.debugr
 Update the variable `GITHUB_API_OWNER` in class `java-lib/com.grapecity.debugrank.javalib.constants.Api` to your Github name.
 
 You should now be able to launch the app to test against your forked repo.  **Note** that Retrofit will automatically be caching responses.  You'll need to clear the DebugRank local app cache in order to retrive updated code files during testing iterations.
+
+```
+Android, Google Play, and the Google Play logo are trademarks of Google Inc.
+```
