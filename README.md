@@ -4,7 +4,7 @@ of debugging code to find X bugs.  Read the [DebugRank blog](http://www.goxuni.c
 
 See the published app in [Google Play](https://play.google.com/store/apps/details?id=debugrank.grapecity.com.debugrank&hl=en)
 
-Cloud code compiling / execution is possible by utilizing the HackerRank API found at hackerrank.com/api.
+Cloud code compiling / execution is possible by utilizing the HackerRank API found at [hackerrank.com/api](https://www.hackerrank.com/api).
 
 The code editor uses GrapeCity's Xuni FlexGrid for bi directional scrolling and inline editing.
 
