@@ -6,7 +6,7 @@ See the published app in [Google Play](https://play.google.com/store/apps/detail
 
 Cloud code compiling / execution is possible by utilizing the HackerRank API found at [hackerrank.com/api](https://www.hackerrank.com/api).
 
-The code editor uses GrapeCity's Xuni FlexGrid for bi directional scrolling and inline editing.
+The code editor uses [GrapeCity's Xuni FlexGrid](http://www.goxuni.com/?utm_source=github&utm_medium=link&utm_campaign=debugrank) for bi directional scrolling and inline editing.
 
 Some technologies used in this sample include:
 * Realm
