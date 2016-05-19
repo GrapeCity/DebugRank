@@ -2,7 +2,6 @@
 DebugRank is an android sample that uses MVP for the architecture to ease unit test coverage.  The app is the gamification 
 of debugging code to find X bugs.  Read the [DebugRank blog](http://www.goxuni.com/673845-debugrank-hackerrank-for-debugging/?utm_source=github&utm_medium=link&utm_campaign=debugrank) to find out more about the app. 
 
-See the published app in Google Play.
 <a href='https://play.google.com/store/apps/details?id=debugrank.grapecity.com.debugrank&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 
 Cloud code compiling / execution is possible by utilizing the HackerRank API found at [hackerrank.com/api](https://www.hackerrank.com/api).
