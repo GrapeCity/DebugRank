@@ -4,6 +4,21 @@ of debugging code to find X bugs.  Read the [DebugRank blog](http://www.goxuni.c
 
 <a href='https://play.google.com/store/apps/details?id=debugrank.grapecity.com.debugrank&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img  style="max-width: 50%;" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 
+There is also a weekly blog series covering the architecture of DebugRank on [goxuni.com](goxuni.com):
+* [Apply MVP in Android](http://www.goxuni.com/673883-applying-mvp-in-android/?utm_source=github&utm_medium=site&utm_campaign=debugrank)
+* Using Realm on Android
+* Dependency Inversion using Dagger2
+* REST services using Retrofit2
+* Async / Observables using RxJava / RxAndroid
+* Reducing boilerplate code using Butterknife / Dart
+* Mocking dependencies when unit testing using Mockito
+* Functional testing with Espresso
+* Sharing code between unit tests and instrument tests in Android Studio
+* Injecting test dependencies with Dagger2 in Android Studio
+* Loading web images with Picasso and using Supportv4 SVG Assets
+* Dumbing down CLEAN architecture in regards to Android
+* Creating a code editor using Xuni’s FlexGrid
+
 Cloud code compiling / execution is possible by utilizing the HackerRank API found at [hackerrank.com/api](https://www.hackerrank.com/api).
 
 The code editor uses [GrapeCity's Xuni FlexGrid](http://www.goxuni.com/?utm_source=github&utm_medium=link&utm_campaign=debugrank) for bi directional scrolling and inline editing.
