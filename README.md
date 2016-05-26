@@ -6,18 +6,18 @@ of debugging code to find X bugs.  Read the [DebugRank blog](http://www.goxuni.c
 
 There is also a weekly blog series covering the architecture of DebugRank on [goxuni.com](goxuni.com):
 * [Apply MVP in Android](http://www.goxuni.com/673883-applying-mvp-in-android/?utm_source=github&utm_medium=site&utm_campaign=debugrank)
-* Using Realm on Android
-* Dependency Inversion using Dagger2
-* REST services using Retrofit2
-* Async / Observables using RxJava / RxAndroid
-* Reducing boilerplate code using Butterknife / Dart
-* Mocking dependencies when unit testing using Mockito
-* Functional testing with Espresso
-* Sharing code between unit tests and instrument tests in Android Studio
-* Injecting test dependencies with Dagger2 in Android Studio
-* Loading web images with Picasso and using Supportv4 SVG Assets
-* Dumbing down CLEAN architecture in regards to Android
-* Creating a code editor using Xuni’s FlexGrid
+* Using Realm on Android (coming soon)
+* Dependency Inversion using Dagger2 (coming soon)
+* REST services using Retrofit2 (coming soon)
+* Async / Observables using RxJava / RxAndroid (coming soon)
+* Reducing boilerplate code using Butterknife / Dart (coming soon)
+* Mocking dependencies when unit testing using Mockito (coming soon)
+* Functional testing with Espresso (coming soon)
+* Sharing code between unit tests and instrument tests in Android Studio (coming soon)
+* Injecting test dependencies with Dagger2 in Android Studio (coming soon)
+* Loading web images with Picasso and using Supportv4 SVG Assets (coming soon)
+* Dumbing down CLEAN architecture in regards to Android (coming soon)
+* Creating a code editor using Xuni’s FlexGrid (coming soon)
 
 Cloud code compiling / execution is possible by utilizing the HackerRank API found at [hackerrank.com/api](https://www.hackerrank.com/api).
 
