@@ -5,7 +5,7 @@ of debugging code to find X bugs.  Read the [DebugRank blog](http://www.goxuni.c
 <a href='https://play.google.com/store/apps/details?id=debugrank.grapecity.com.debugrank&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img  style="max-width: 50%;" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 
 There is also a weekly blog series covering the architecture of DebugRank on [goxuni.com](goxuni.com):
-* [Apply MVP in Android](http://www.goxuni.com/673883-applying-mvp-in-android/?utm_source=github&utm_medium=site&utm_campaign=debugrank)
+* [Applying MVP in Android](http://www.goxuni.com/673883-applying-mvp-in-android/?utm_source=github&utm_medium=site&utm_campaign=debugrank)
 * Using Realm on Android (coming soon)
 * Dependency Inversion using Dagger2 (coming soon)
 * REST services using Retrofit2 (coming soon)
