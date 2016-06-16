@@ -6,8 +6,8 @@ of debugging code to find X bugs.  Read the [DebugRank blog](http://www.goxuni.c
 
 There is also a weekly blog series covering the architecture of DebugRank on [goxuni.com](goxuni.com):
 * [Applying MVP in Android](http://www.goxuni.com/673883-applying-mvp-in-android/?utm_source=github&utm_medium=site&utm_campaign=debugrank)
-* Using Realm on Android (coming soon)
-* Dependency Inversion using Dagger2 (coming soon)
+* [Exploring Realm on Android](http://www.goxuni.com/674296-exploring-realm-on-android/?utm_source=reddit&utm_medium=link&utm_campaign=debugrank)
+* [Dependency Inversion using Dagger2](http://www.goxuni.com/674468-dependency-inversion-using-dagger2/?utm_source=reddit&utm_medium=link&utm_campaign=debugrank)
 * REST services using Retrofit2 (coming soon)
 * Async / Observables using RxJava / RxAndroid (coming soon)
 * Reducing boilerplate code using Butterknife / Dart (coming soon)
